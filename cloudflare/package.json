@@ -1,0 +1,22 @@
+{
+  "name": "prism-api",
+  "version": "1.0.0",
+  "description": "The Prism — Cloudflare Worker API by Stratix",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev --env development",
+    "deploy:staging": "wrangler deploy --env staging",
+    "deploy:prod": "wrangler deploy --env production",
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "setup:secrets": "bash scripts/setup-secrets.sh"
+  },
+  "dependencies": {
+    "hono": "^4.5.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "typescript": "^5.5.4",
+    "wrangler": "^3.72.0"
+  }
+}
